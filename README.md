@@ -31,8 +31,10 @@ Compares two threads incrementing a shared variable 50,000,000 times.
 
 ### 3. Atomic Operations & Optimization (`task4.cpp`)
 Resolves the mutex performance bottleneck by using local thread variables to accumulate increments, followed by a single `std::atomic::fetch_add` operation. Achieves perfect accuracy with execution times even faster than the unprotected race condition.
+
 <img src="./screenshots/scr4.png" alt="Atomic Variables" width="450" />
 
 ### 4. Strict Thread Synchronization (`task5.cpp`)
 Forces two asynchronous threads to operate in perfect lockstep. Using modulo arithmetic and atomic loads, the threads strictly alternate turns to increment a shared counter up to 1,000 without skipping or duplicating states.
+
 <img src="./screenshots/scr5.png" alt="Synchronized Output" width="300" />
